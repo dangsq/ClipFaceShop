@@ -430,9 +430,7 @@ if __name__ == "__main__":
     parser.add_argument("--out_test_latents_path", type=str, default="./dirs/latents_2.pt")
     parser.add_argument("--train_latents_path", type=str, default="./dirs/latents1200.pt")
     parser.add_argument("--out_train_latents_path", type=str, default="./dirs/latents_1200_2.pt")
-    
 
-    parser.add_argument("--clip_model", default='ViT-B/16', type=str)
     parser.add_argument("--str", default='', type=str)
     args = parser.parse_args()
     result_image = main(args)

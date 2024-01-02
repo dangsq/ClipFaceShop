@@ -11,10 +11,10 @@ abs_file = os.path.abspath(__file__)
 abs_dir = abs_file[:abs_file.rfind('\\')] if os.name == 'nt' else abs_file[:abs_file.rfind(r'/')]	
 class CLIPLoss(torch.nn.Module):
 
-    def __init__(self, stylegan_size=1024,model='ViT-B/16'):
+    def __init__(self, stylegan_size=1024):
         super(CLIPLoss, self).__init__()
-        print(f'load clip model {model}')
-        self.model, self.preprocess = clip.load(os.path.join(abs_dir,"../pretrained_models/ViT-B-32.pt"), device='cpu')
+        print(f'load clip model')
+        self.model, self.preprocess = clip.load("ViT-B-32.pt", device='cpu')
         self.upsample = torch.nn.Upsample(scale_factor=7)
         self.avg_pool = torch.nn.AvgPool2d(kernel_size=stylegan_size // 32)
 

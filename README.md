@@ -8,11 +8,14 @@ The development of face editing has been boosted since the birth of StyleGAN. Ma
 
 ---------------------
 
-We now offer one demo script for one-epoch training at `clipfaceshop-main.py`. You can simply follow this command:
+We now offer one demo script for one-epoch training at `clipfaceshop-main.py`. 
+
+You should download some pretrained model weights ( [pretrained StyleGAN2](https://drive.google.com/uc?id=1EM87UquaoQmk17Q8d5kYIAHqu0dkYqdT), [pretrained ArcFace](https://github.com/TreB1eN/InsightFace_Pytorch) ) and move them to `./pretrained_models`. We utilized the pretrained face parsing model of  [CelebAMask-HQ](https://drive.google.com/file/d/1o1m-eT38zNCIFldcRaoWcLvvBtY8S4W3/view?usp=sharing) at the path `./pretrained_models/mask_net.pth` for our face parsing.
+
+Then you can simply follow this command:
 
 ```
-python clipfaceshop-main.py --target_path ./dirs/targets/example.jpg --output_folder ./output/
-  --lambda_transfer 1 --weight_decay 5e-5 --lambda_consistency 0.1 --lambda_id 1.5 --lambda_sourcesim 0.3 --lambda_gaps 1 --lambda_background 1e-7 --mpp_d 5  --num_images 3  --lr 0.1
+python clipfaceshop-main.py --target_path ./dirs/targets/example.jpg --output_folder ./output/ --lambda_transfer 1 --weight_decay 5e-5 --lambda_consistency 0.1 --lambda_id 1.5 --lambda_sourcesim 0.3 --lambda_gaps 1 --lambda_background 1e-7 --mpp_d 5  --num_images 3  --lr 0.1
 ```
 
 to generate results, where `--target_path` is the target clipart path and the results will be saved at `--output_folder`.
