@@ -8,7 +8,7 @@ The development of face editing has been boosted since the birth of StyleGAN. Ma
 
 ---------------------
 
-We now offer one demo script for one-epoch training at `clipfaceshop-main.py`. 
+We now offer one demo script for one-epoch training at `clipfaceshop-main.py`. And we will be releasing a convenient clipart editor in the future.
 
 You should download some pretrained model weights ( [pretrained StyleGAN2](https://drive.google.com/uc?id=1EM87UquaoQmk17Q8d5kYIAHqu0dkYqdT), [pretrained ArcFace](https://github.com/TreB1eN/InsightFace_Pytorch) ) and move them to `./pretrained_models`. We utilized the pretrained face parsing model of  [CelebAMask-HQ](https://drive.google.com/file/d/1o1m-eT38zNCIFldcRaoWcLvvBtY8S4W3/view?usp=sharing) at the path `./pretrained_models/mask_net.pth` for our face parsing.
 
