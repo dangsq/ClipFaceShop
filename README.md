@@ -8,5 +8,30 @@ The development of face editing has been boosted since the birth of StyleGAN. Ma
 
 ---------------------
 
-Code is under collated and will be released in next few months.
+We now offer one demo script for one-epoch training at `clipfaceshop-main.py`. You can simply follow this command:
 
+```
+python clipfaceshop-main.py --target_path ./dirs/targets/example.jpg --output_folder ./output/
+  --lambda_transfer 1 --weight_decay 5e-5 --lambda_consistency 0.1 --lambda_id 1.5 --lambda_sourcesim 0.3 --lambda_gaps 1 --lambda_background 1e-7 --mpp_d 5  --num_images 3  --lr 0.1
+```
+
+to generate results, where `--target_path` is the target clipart path and the results will be saved at `--output_folder`.
+
+You can change the parameters for better results. 
+
+Good luck!
+
+-------------
+
+If you make use of our work, please cite our paper:
+```
+@InProceedings{Zhao_2023_ICCV,
+    author    = {Zhao, Nanxuan and Dang, Shengqi and Lin, Hexun and Shi, Yang and Cao, Nan},
+    title     = {Bring Clipart to Life},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2023},
+    pages     = {23341-23350}
+}
+```
+We thanks [TargetClip](https://github.com/hila-chefer/TargetCLIP), [StyleGAN2](https://github.com/NVlabs/stylegan2) for their excellent works.
