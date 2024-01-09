@@ -37,4 +37,4 @@ If you make use of our work, please cite our paper:
     pages     = {23341-23350}
 }
 ```
-We thank [TargetClip](https://github.com/hila-chefer/TargetCLIP), [StyleGAN2](https://github.com/NVlabs/stylegan2) for their excellent works.
+We thank [TargetCLIP](https://github.com/hila-chefer/TargetCLIP), [StyleGAN2](https://github.com/NVlabs/stylegan2), [StyleCLIP](https://github.com/orpatashnik/StyleCLIP) for their excellent works.
